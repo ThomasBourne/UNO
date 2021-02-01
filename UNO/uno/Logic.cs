@@ -73,6 +73,7 @@ namespace uno
          * clean up and simplify code
          */
         {
+            /*
             Deck deck = new Deck();
             //add the pickup card with just enter
             Console.Write("What Card do you want to play (Enter to pickup card)\n>>> ");
@@ -111,6 +112,64 @@ namespace uno
             playersDeck.RemoveAt(pos - 1);
             Console.Clear();
             return (newPilee, playersDeck);
+            */ //This is old code deos not work
+            Deck deck = new Deck();
+            List<int> validIndexes = GetValidIndexes(oldPile, playersDeck);
+            int index = GetRangeInput(validIndexes);
+            if (index == 1000)
+            {
+                playersDeck.Add(deck.GenerateCard());
+                return (oldPile, playersDeck);
+            }
+
+            string[] newPile = playersDeck[index];
+            playersDeck.RemoveAt(index);
+            return (newPile, playersDeck);
+        }
+        private int GetNumericInput()
+        {
+            Console.Write("Enter the index of the card you want to play\n>>> ");
+            string input = Console.ReadLine();
+            while (!int.TryParse(input, out int asd))
+            {
+                if (input == "" || input == "\n")
+                    return 1000;
+                Console.Write("Value not valid\nEnter the index of the card you want to play\n>>> ");
+                input = Console.ReadLine();
+            }
+            int numIndex = int.Parse(input);
+            return numIndex;
+        }
+        private int GetRangeInput(List<int> validIndexes)
+        {
+            int index = GetNumericInput();
+            //bool valid = false;
+            while (true)
+            {
+                for (int i = 0; i < validIndexes.Count; i++)
+                {
+                    if (index -1 == validIndexes[i] || index == 1000)
+                    {
+                        //valid = !valid;
+                        if (index < 999)
+                            return index - 1;
+                        return index;
+                    }
+                }
+                index = GetNumericInput();
+            }
+        }
+        private List<int> GetValidIndexes(string[] pile, List<string[]> deck)
+        {
+            List<int> validIndexes = new List<int>();
+            for (int i = 0; i < deck.Count; i++)
+            {
+                if (pile[0] == deck[i][0] || pile[1] == deck[i][1])
+                {
+                    validIndexes.Add(i);
+                }
+            }
+            return validIndexes;
         }
     }
 }

@@ -82,6 +82,7 @@ namespace uno
                     List<string[]> tmp = new List<string[]>();
                     (pile, tmp) = logic.Play(pile, players[i].Deck());
                     players[i].getValues(tmp);
+                    Console.Clear();
                     System.Threading.Thread.Sleep(5000);
                 }
             }

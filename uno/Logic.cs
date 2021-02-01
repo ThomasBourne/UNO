@@ -68,7 +68,7 @@ namespace uno
         }
         public (string[], List<string[]>) Play(string[] oldPile, List<string[]> playersDeck) //The highest level of card logic
         /* BUGS
-         * when the card num gets low enough the play cannot pick up cards
+         * cant pickup cards
          */
         {
             //creates object of Deck class

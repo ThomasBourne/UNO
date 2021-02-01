@@ -94,8 +94,7 @@ namespace uno
             string input = Console.ReadLine();
             while (!int.TryParse(input, out int asd))
             {
-                if (input == "" || input == "\n")
-                    return Store.NumForPickup;
+                if (input == "" || input == "\n") { return Store.NumForPickup; }
                 Console.Write("Value not valid\nEnter the index of the card you want to play (leave blank to pickup)\n>>> ");
                 input = Console.ReadLine();
             }
@@ -106,17 +105,14 @@ namespace uno
         {
             
             int index = GetNumericInput();
-            //bool valid = false;
             while (true)
             {
                 for (int i = 0; i < validIndexes.Count; i++)
                 {
                     if (index -1 == validIndexes[i] || index == Store.NumForPickup)
                     {
-                        //valid = !valid;
-                        if (index != Store.NumForPickup)
-                            return index - 1;
-                        return index;
+                        if (index != Store.NumForPickup) { return index - 1; }
+                        return Store.NumForPickup;
                     }
                 }
                 index = GetNumericInput();

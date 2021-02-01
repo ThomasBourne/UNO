@@ -63,13 +63,9 @@ namespace uno
             Deck deckGen = new Deck();
             int repeat;
             if(card == "+2")
-            {
                 repeat = 2;
-            }
             else
-            {
                 repeat = 4;
-            }
             for (int i = 0; i < repeat; i++)
             {
                 deck.Add(deckGen.GenerateCard());

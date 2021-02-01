@@ -11,7 +11,7 @@ namespace uno
             //creating the class objects
             Deck deck = new Deck();
             Logic logic = new Logic();
-            Store store = new Store();
+            //Store store = new Store();
 
             //gets the number of players
             int numPlayers = NumPlayers();
@@ -29,44 +29,18 @@ namespace uno
             pile = deck.GenerateCard();
 
 
-            //generates player objects and their randomly generated cards
-            Player player1 = new Player();
-            player1.getValues(deck.GenerateStartupDeck());
-            Player player2 = new Player();
-            player2.getValues(deck.GenerateStartupDeck());
-            Player player3 = new Player();
-            player3.getValues(deck.GenerateStartupDeck());
-            Player player4 = new Player();
-            player4.getValues(deck.GenerateStartupDeck());
-            Player player5 = new Player();
-            player5.getValues(deck.GenerateStartupDeck());
-            Player player6 = new Player();
-            player6.getValues(deck.GenerateStartupDeck());
-            Player player7 = new Player();
-            player7.getValues(deck.GenerateStartupDeck());
+            //generates player object and the randomly generated cards
+            Player player = new Player();
+            player.getValues(deck.GenerateStartupDeck());
 
             //puts all of the players into a list
             List<Player> players = new List<Player>();
 
-            //the players are added to the players here (could have used an array but List is easier to modify)
             for (int i = 0; i < numPlayers; i++)
             {
-                if (i == 0)
-                {
-                    players.Add(player1);
-                    players.Add(player2);
-                }
-                if (i == 2)
-                    players.Add(player3);
-                if (i == 3)
-                    players.Add(player4);
-                if (i == 4)
-                    players.Add(player5);
-                if (i == 5)
-                    players.Add(player6);
-                if (i == 6)
-                    players.Add(player7);
-
+                players.Add(player);
+                //generates another deck (using the same variable to simplified)
+                player.getValues(deck.GenerateStartupDeck());
             }
             //where the game played
             /* To Fix/Add

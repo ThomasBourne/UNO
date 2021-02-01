@@ -1,0 +1,11 @@
+C:\Users\Thomas\Desktop\UNO\uno\bin\Debug\netcoreapp3.1\uno.exe
+C:\Users\Thomas\Desktop\UNO\uno\bin\Debug\netcoreapp3.1\uno.deps.json
+C:\Users\Thomas\Desktop\UNO\uno\bin\Debug\netcoreapp3.1\uno.runtimeconfig.json
+C:\Users\Thomas\Desktop\UNO\uno\bin\Debug\netcoreapp3.1\uno.runtimeconfig.dev.json
+C:\Users\Thomas\Desktop\UNO\uno\bin\Debug\netcoreapp3.1\uno.dll
+C:\Users\Thomas\Desktop\UNO\uno\bin\Debug\netcoreapp3.1\uno.pdb
+C:\Users\Thomas\Desktop\UNO\uno\obj\Debug\netcoreapp3.1\uno.csprojAssemblyReference.cache
+C:\Users\Thomas\Desktop\UNO\uno\obj\Debug\netcoreapp3.1\uno.AssemblyInfoInputs.cache
+C:\Users\Thomas\Desktop\UNO\uno\obj\Debug\netcoreapp3.1\uno.AssemblyInfo.cs
+C:\Users\Thomas\Desktop\UNO\uno\obj\Debug\netcoreapp3.1\uno.dll
+C:\Users\Thomas\Desktop\UNO\uno\obj\Debug\netcoreapp3.1\uno.pdb

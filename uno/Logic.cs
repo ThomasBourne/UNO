@@ -26,7 +26,17 @@ namespace uno
                 Console.Write(output);
                 Console.ResetColor();
             }
-            Console.WriteLine($"Card on the top of the pile is {pile[0]}, {pile[1]}");
+            Console.Write($"Card on the top of the pile is ");
+            if (pile[1] == "Yellow")
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            if (pile[1] == "Blue")
+                Console.ForegroundColor = ConsoleColor.Blue;
+            if (pile[1] == "Red")
+                Console.ForegroundColor = ConsoleColor.Red;
+            if (pile[1] == "Green")
+                Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write($"{pile[0]}, {pile[1]}");
+            Console.ResetColor();
             Console.WriteLine("");
         }
         public List<string[]> ChangeCard(List<string[]> deck, List<string[]> card, int pos) //Func may not be implemented or fully built

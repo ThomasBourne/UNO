@@ -83,8 +83,8 @@ namespace uno
             //valid indexs that of the deck that match the pile card
             List<int> validIndexes = GetValidIndexes(oldPile, playersDeck);
             //the input value
-            int index = GetRangeInput(validIndexes);
-            if (index == Store.NumForPickup)
+            var index = GetRangeInput(validIndexes);
+            if (index is string)
             {
                 playersDeck.Add(deck.GenerateCard());
                 return (oldPile, playersDeck);
@@ -94,31 +94,32 @@ namespace uno
             playersDeck.RemoveAt(index);
             return (newPile, playersDeck);
         }
-        private int GetNumericInput()
+        private dynamic GetNumericInput()
         {
             Console.Write("Enter the index of the card you want to play (leave blank to pickup)\n>>> ");
             string input = Console.ReadLine();
             while (!int.TryParse(input, out int asd))
             {
-                if (input == "" || input == "\n") { return Store.NumForPickup; }
+                if (input == "" || input == "\n") { return ""; }
                 Console.Write("Value not valid\nEnter the index of the card you want to play (leave blank to pickup)\n>>> ");
                 input = Console.ReadLine();
             }
             int numIndex = int.Parse(input);
             return numIndex;
         }
-        private int GetRangeInput(List<int> validIndexes)
+        private dynamic GetRangeInput(List<int> validIndexes)
         {
             
-            int index = GetNumericInput();
+            var index = GetNumericInput();
+            if (index is string)
+                return "";
             while (true)
             {
                 for (int i = 0; i < validIndexes.Count; i++)
                 {
-                    if (index -1 == validIndexes[i] || index == Store.NumForPickup)
+                    if (index -1 == validIndexes[i])
                     {
-                        if (index != Store.NumForPickup) { return index - 1; }
-                        return Store.NumForPickup;
+                        return index - 1;
                     }
                 }
                 index = GetNumericInput();

@@ -34,7 +34,7 @@ namespace uno
     {
         //local string[]s that stor colours and possible values
         private string[] colours = { "Red", "Green", "Blue", "Yellow" };
-        private string[] value = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "+2", "+4", "reverse", "miss" };
+        private string[] value = { "0", "1", "2", "3", "4", "5"/*, "6", "7", "8", "9", "10"*/, "+2", "+4", "reverse", "miss" };
         public string[] GenerateCard() //generates a card with: [string val, string colour]
         {
             Random rand = new Random();

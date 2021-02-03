@@ -70,7 +70,7 @@ namespace uno
             Console.Write("Enter the number of players (2-7)\n>>> ");
             strNumPlayers = Console.ReadLine();
             //checks if it is numeric AND in the range of 2 to 7
-            while (strNumPlayers.Any(c => c < '2' || c > '7'))
+            while (strNumPlayers.Any(c => c < '2' || c > '7') || strNumPlayers == "")
             {
                 Console.Write("Please enter a number between 2 and 7\n>>> ");
                 strNumPlayers = Console.ReadLine();

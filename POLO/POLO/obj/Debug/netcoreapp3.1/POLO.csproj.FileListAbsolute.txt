@@ -1,0 +1,11 @@
+C:\Users\Thomas\Desktop\POLO\POLO\bin\Debug\netcoreapp3.1\POLO.exe
+C:\Users\Thomas\Desktop\POLO\POLO\bin\Debug\netcoreapp3.1\POLO.deps.json
+C:\Users\Thomas\Desktop\POLO\POLO\bin\Debug\netcoreapp3.1\POLO.runtimeconfig.json
+C:\Users\Thomas\Desktop\POLO\POLO\bin\Debug\netcoreapp3.1\POLO.runtimeconfig.dev.json
+C:\Users\Thomas\Desktop\POLO\POLO\bin\Debug\netcoreapp3.1\POLO.dll
+C:\Users\Thomas\Desktop\POLO\POLO\bin\Debug\netcoreapp3.1\POLO.pdb
+C:\Users\Thomas\Desktop\POLO\POLO\obj\Debug\netcoreapp3.1\POLO.csprojAssemblyReference.cache
+C:\Users\Thomas\Desktop\POLO\POLO\obj\Debug\netcoreapp3.1\POLO.AssemblyInfoInputs.cache
+C:\Users\Thomas\Desktop\POLO\POLO\obj\Debug\netcoreapp3.1\POLO.AssemblyInfo.cs
+C:\Users\Thomas\Desktop\POLO\POLO\obj\Debug\netcoreapp3.1\POLO.dll
+C:\Users\Thomas\Desktop\POLO\POLO\obj\Debug\netcoreapp3.1\POLO.pdb
